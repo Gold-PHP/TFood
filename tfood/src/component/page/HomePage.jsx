@@ -1,5 +1,8 @@
 import Carousel from "../cpn/Carousel";
+import Contact from "../cpn/Contact";
 import Pagelayout from "../cpn/Pagelayout";
+import Service from "../cpn/Services";
+import Step from "../cpn/Step";
 import MenuLayout from "./Menu/MenuLayout/MenuLayout";
 
 function HomePage() {
@@ -47,6 +50,9 @@ function HomePage() {
     <Pagelayout>
       <Carousel />
       <MenuLayout name='New Product' data={foodList}/>
+      <Service/>
+      <Step/>
+      <Contact/>
     </Pagelayout>
   );
 }

@@ -11,6 +11,8 @@ import Drinks from "./component/page/Menu/Pizza/Drinks"
 import Checkout from "./component/page/Checkout/Checkout"
 import OrderTracking from "./component/page/OrderTracking/OrderTracking"
 import OrderTrackingDetail from "./component/page/OrderTracking/OrderTrackingDetail"
+import About from "./component/page/About"
+import Dashboard from "./component/page/AdminPage/Dashboard"
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
       <Route path="/" element={<HomePage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/about" element={<About/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/menu" element={<Menu/>}>
         <Route path="pizza" element={<Pizza/>}/>
@@ -31,7 +34,7 @@ function App() {
       <Route path="/checkout" element={<Checkout/>}/>
       <Route path="/order-tracking" element={<OrderTracking/>}/>
       <Route path="/order-tracking-details/:id" element={<OrderTrackingDetail/>}/>
-      {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
+      <Route path="/dashboard" element={<Dashboard/>}/>
       {/* <Route path="/user-management" element={<UserManagement/>}/> */}
       {/* <Route path="/product-management" element={<ProductManagement/>}/> */}
     </Routes>

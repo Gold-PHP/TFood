@@ -1,180 +1,157 @@
-import { Link, useNavigate } from "react-router-dom";
-import Pagelayout from "../../component/cpn/Pagelayout";
-import TextFields from "../../component/TextField/TextField";
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
+import { useFormik } from 'formik';
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
 import * as yup from "yup";
-import { useFormik } from "formik";
-import { useDispatch, useSelector } from "react-redux";
-import { getListUser, register } from "../rtk/slices/authSlice";
-import { notification } from "../utils/helper";
-import { useEffect } from "react";
+import { getListUser, register } from '../../component/rtk/slices/authSlice';
+import TextFields from '../TextField/TextField';
+import { notification } from '../../component/utils/helper';
+
 
 function Register() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const {userData} = useSelector(state => state.auth)
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { userData } = useSelector(state => (state.auth));
 
-  const validationSchema = yup.object({
-    firstname: yup.string().required("Chưa nhập first name"),
-    lastname: yup.string().required("Chưa nhập last name"),
-    email: yup
-      .string()
-      .required("Chưa nhập email")
-      .email("Chưa nhập đúng định dạng email"),
-    password: yup
-      .string()
-      .required("Chưa nhập password")
-      .min(6, "Mật khẩu tối thiểu 6 ký tự"),
-    cpassword: yup
-      .string()
-      .required("Chưa nhập confirm password")
-      .oneOf([yup.ref("password")], "Mật khẩu không trùng khớp"),
-  });
 
-  const randomId = () => {
-    return Math.floor(Math.random()*9999)
-  }
+    const validationSchema = yup.object({
+        // firstname: yup.string().required("Chưa nhập first name"),
+        fullname: yup.string().required("Chưa nhập full name"),
+        email: yup
+            .string()
+            .required("Chưa nhập email")
+            .email("Chưa nhập đúng định dạng email"),
+        password: yup
+            .string()
+            .required("Chưa nhập password")
+            .min(6, "Mật khẩu tối thiểu 6 ký tự"),
+        cpassword: yup
+            .string()
+            .required("Chưa nhập confirm password")
+            .oneOf([yup.ref("password")], "Mật khẩu không trùng khớp"),
+    });
 
-  const formik = useFormik({
-    initialValues: {
-      firstname: "",
-      lastname: "",
-      email: "",
-      password: "",
-      cpassword: "",
-    },
-    validationSchema: validationSchema,
-    onSubmit: (values) => {
-      const newData = {
-        id : randomId(),
-        firstname : values.firstname,
-        lastName : values.lastname,
-        email : values.email,
-        password : values.password,
-        isAdmin : false,
-        avatar : "https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg"
-      }
-      let checkExistEmail = userData.find(x => x.email == values.email)
-      if (checkExistEmail) {
-        notification("Email Exist. Please Try Again",'error');
-      } else {
-        dispatch(register(newData))
-        notification("Register Success");
-        navigate('/login');
-      }
-    },
-  });
+    const randomId = () => {
+        return Math.floor(Math.random() * 9999)
+    }
+    const formik = useFormik({
+        initialValues: {
+            // firstname: "",
+            fullname: "",
+            email: "",
+            password: "",
+            cpassword: "",
+        },
+        validationSchema: validationSchema,
+        onSubmit: (values) => {
+            const newData = {
+                id: randomId(),
+                // firstname: values.firstname,
+                fullname: values.fullname,
+                email: values.email,
+                password: values.password,
+                isAdmin: false,
+                avatar: "https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg"
+           
+            }
+            let checkExistEmail = userData.find(x => x.email == values.email)
+            if (checkExistEmail) {
+                notification("Email Exist. Please Try Again", 'error');
+            } else {
+                dispatch(register(newData))
+                notification("Register Success");
+                navigate('/login');
+            }
+            console.log(newData);
+        },
+    });
+    useEffect(() => {
+        dispatch(getListUser())
+    }, [])
 
-  useEffect(()=>{
-    dispatch(getListUser())
-  },[])
-
-  return (
-    <Pagelayout>
-      <div className="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10 mt-14">
-        <div className="w-full xl:w-3/4 lg:w-11/12 flex">
-          <div className="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg bg-[url('https://e0.pxfuel.com/wallpapers/527/704/desktop-wallpaper-pizza-cooking.jpg')]" />
-          <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-            <h3 className="pt-4 text-2xl text-center">Create an Account!</h3>
-            <div className="flex justify-center">
-            <form
-              onSubmit={formik.handleSubmit}
-              className="px-8 pt-6 pb-8 mb-4 bg-white rounded "
-            >
-              <div className="flex gap-5">
-                <TextFields
-                  name="First Name"
-                  type="text"
-                  value={formik.values.firstname}
-                  onChange={formik.handleChange("firstname")}
-                  required={true}
-                  helperText={
-                    formik.touched.firstname && formik.errors.firstname
-                  }
-                  error={
-                    formik.touched.firstname && Boolean(formik.errors.firstname)
-                  }
-                  width="200px"
-                />
-                <TextFields
-                  name="Last Name"
-                  type="text"
-                  value={formik.values.lastname}
-                  onChange={formik.handleChange("lastname")}
-                  required={true}
-                  helperText={formik.touched.lastname && formik.errors.lastname}
-                  error={
-                    formik.touched.lastname && Boolean(formik.errors.lastname)
-                  }
-                  width="200px"
-                />
-              </div>
-
-              <TextFields
-                name="Email"
-                type="email"
-                value={formik.values.email}
-                onChange={formik.handleChange("email")}
-                required={true}
-                helperText={formik.touched.email && formik.errors.email}
-                error={formik.touched.email && Boolean(formik.errors.email)}
-                width="420px"
-              />
-              <TextFields
-                name="Password"
-                type="password"
-                value={formik.values.password}
-                onChange={formik.handleChange("password")}
-                required={true}
-                helperText={formik.touched.password && formik.errors.password}
-                error={
-                  formik.touched.password && Boolean(formik.errors.password)
-                }
-                width="420px"
-              />
-              <TextFields
-                name="Confirm Password"
-                type="password"
-                value={formik.values.cpassword}
-                onChange={formik.handleChange("cpassword")}
-                required={true}
-                helperText={formik.touched.cpassword && formik.errors.cpassword}
-                error={
-                  formik.touched.cpassword && Boolean(formik.errors.cpassword)
-                }
-                width="420px"
-              />
-              <div className="my-6 text-center">
-                <button
-                  className="w-full px-4 py-2 font-bold text-white bg-red-700 rounded-md hover:bg-red-900 focus:outline-none focus:shadow-outline"
-                  type="submit"
-                >
-                  Register Account
-                </button>
-              </div>
-              <hr className="mb-6 border-t" />
-              <div className="text-center">
-                <a
-                  className="inline-block text-sm text-red-700 align-baseline hover:text-red-900"
-                  href="#"
-                >
-                  Forgot Password?
-                </a>
-              </div>
-              <div className="text-center">
-                <Link
-                  className="inline-block text-sm text-red-700 align-baseline hover:text-red-900"
-                  to="/login"
-                >
-                  Already have an account? Login!
-                </Link>
-              </div>
-            </form>
+    return (
+        <div>
+            {/* component */}
+            {/* Create by joker banny */}
+            <div className="h-screen bg-indigo-100 flex justify-center items-center  bg-cover bg-no-repeat" style={{ backgroundImage: 'url("https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?w=996&t=st=1697449043~exp=1697449643~hmac=8347226077f76677b4258e0f8af70a226e21f14ee3d792a68b0d4d09e0807c4a")' }}>
+                <div className="lg:w-2/5 md:w-1/2 w-2/3">
+                    <form onSubmit={formik.handleSubmit} className="bg-white p-10 rounded-lg shadow-lg min-w-full bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md">
+                        <h1 className="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Register</h1>
+                        <div>
+                            <label className="text-gray-800 font-semibold block my-3 text-md " htmlFor="username">User Name</label>
+                            <TextFields
+                                
+                                type="text"
+                                value={formik.values.fullname}
+                                onChange={formik.handleChange("fullname")}
+                                required={true}
+                                helperText={
+                                    formik.touched.fullname && formik.errors.fullname
+                                }
+                                error={
+                                    formik.touched.fullname && Boolean(formik.errors.fullname)
+                                }
+                                width="100%"
+                            />
+                            {/* <input className="w-full text-black px-4 py-2 rounded-lg focus:outline-none bg-input" type="text" name="username" id="username" placeholder="username" /> */}
+                        </div>
+                        <div>
+                            <label className="text-gray-800 font-semibold block my-3 text-md" htmlFor="email">Email</label>
+                            <TextFields
+                                
+                                type="email"
+                                value={formik.values.email}
+                                onChange={formik.handleChange("email")}
+                                required={true}
+                                helperText={formik.touched.email && formik.errors.email}
+                                error={formik.touched.email && Boolean(formik.errors.email)}
+                                width="100%"
+                            />
+                            {/* <input className="w-full text-black px-4 py-2 rounded-lg focus:outline-none bg-input" type="text" name="email" id="email" placeholder="@email" /> */}
+                        </div>
+                        <div>
+                            <label className="text-gray-800 font-semibold block my-3 text-md" htmlFor="password">Password</label>
+                            <TextFields
+                                
+                                type="password"
+                                value={formik.values.password}
+                                onChange={formik.handleChange("password")}
+                                required={true}
+                                helperText={formik.touched.password && formik.errors.password}
+                                error={
+                                    formik.touched.password && Boolean(formik.errors.password)
+                                }
+                                width="100%"
+                            />
+                            {/* <input className="w-full text-black px-4 py-2 rounded-lg focus:outline-none bg-input" type="password" name="password" id="password" placeholder="password" /> */}
+                        </div>
+                        <div>
+                            <label className="text-gray-800 font-semibold block my-3 text-md" htmlFor="confirm">Confirm password</label>
+                            <TextFields
+                                
+                                type="password"
+                                value={formik.values.cpassword}
+                                onChange={formik.handleChange("cpassword")}
+                                required={true}
+                                helperText={formik.touched.cpassword && formik.errors.cpassword}
+                                error={
+                                    formik.touched.cpassword && Boolean(formik.errors.cpassword)
+                                }
+                                width="100%"
+                            />
+                            {/* <input className="w-full text-black px-4 py-2 rounded-lg focus:outline-none bg-input" type="password" name="confirm" id="confirm" placeholder="confirm password" /> */}
+                        </div>
+                        <button type="submit" className="w-full mt-6  bg-indigo-600 hover:bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans">Register</button>
+                        <button  className="w-full mt-6 mb-3 bg-indigo-600 hover:bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans">Login</button>
+                    </form>
+                </div>
             </div>
-          </div>
+
         </div>
-      </div>
-    </Pagelayout>
-  );
+    )
 }
 
-export default Register;
+export default Register

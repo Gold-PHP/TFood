@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Pagelayout from "../../cpn/Pagelayout";
-import CartItem from "../Cart/CartItem";
+import CartItem from "./CartItem";
 import { decrease, increase, removeCart } from "../../rtk/slices/cartSlice";
 import { useNavigate } from "react-router";
 import { notification } from "../../utils/helper";
