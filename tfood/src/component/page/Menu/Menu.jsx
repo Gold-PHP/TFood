@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Pagelayout from "../../components/Pagelayout";
+import Pagelayout from "../../cpn/Pagelayout";
 
 function Menu() {
   return (

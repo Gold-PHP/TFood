@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Pagelayout from "../../components/Pagelayout";
+import Pagelayout from "../../cpn/Pagelayout";
 import OrderTrackingItem from "./OrderTrackingItem";
 import moment from "moment";
 

@@ -1,5 +1,5 @@
-import Carousel from "../components/Carousel";
-import Pagelayout from "../components/Pagelayout";
+import Carousel from "../cpn/Carousel";
+import Pagelayout from "../cpn/Pagelayout";
 import MenuLayout from "./Menu/MenuLayout/MenuLayout";
 
 function HomePage() {

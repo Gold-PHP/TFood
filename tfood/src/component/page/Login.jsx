@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
-import Pagelayout from "../components/Pagelayout";
-import TextFields from "../components/TextField/TextField";
-import Check from "../components/Checkbox/Checkbox";
+import Pagelayout from "../../component/cpn/Pagelayout";
+import TextFields from "../TextField/TextField";
+import Check from "../Checkbox/Checkbox";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../rtk/slices/authSlice";
 import { useEffect, useState } from "react";
-import LoginGoogle from "../components/LoginGoogle";
+import LoginGoogle from "../../component/cpn/LoginGoogle";
 
 function Login() {
   const navigate = useNavigate();

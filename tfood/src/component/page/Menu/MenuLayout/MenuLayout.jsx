@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import ProductItem from "../../../components/ProductItem";
+import ProductItem from "../../../cpn/ProductItem";
 import ProductDetail from "../ProductDetail/ProductDetail"
 
 function MenuLayout({ data, name }) {

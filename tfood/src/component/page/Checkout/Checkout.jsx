@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../Cart/CartItem";
-import Pagelayout from"../"
+import Pagelayout from"../../cpn/Pagelayout"
 import { decrease, increase, removeCart } from "../../rtk/slices/cartSlice";
 import { useNavigate } from "react-router";
-import TextFields from "../../components/TextField/TextField";
+import TextFields from "../../TextField/TextField";
 import { useEffect, useState } from "react";
-import SingleSelect from "../../components/Dropdown/SingleSelect";
+import SingleSelect from "../../Dropdown/SingleSelect";
 import {
   apiGetPublicDistricts,
   apiGetPublicProvinces,

@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import Pagelayout from "../../components/Pagelayout";
+import Pagelayout from "../../cpn/Pagelayout";
 import moment from "moment";
 import OrderTrackingItem from "./OrderTrackingItem";
 import { Avatar } from "@mui/material";

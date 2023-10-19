@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import Pagelayout from "../components/Pagelayout";
-import TextFields from "../components/TextField/TextField";
+import Pagelayout from "../../component/cpn/Pagelayout";
+import TextFields from "../../component/TextField/TextField";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
