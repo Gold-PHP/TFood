@@ -13,10 +13,10 @@ function Pizza() {
 
   return (
     <div>
-      <MenuLayout name='FLAVORS OF THE WORLD' data={favor}/>
-      <MenuLayout name='SEAFOOD CRAVERS' data={seafood}/>
-      <MenuLayout name='KID FAVORS' data={kid}/>
-      <MenuLayout name='TRADITIONAL & MEAT LOVERS' data={traditional}/>
+      <MenuLayout name='CHICKEN RECIPES' data={favor}/>
+      <MenuLayout name='SALMON RECIPES' data={seafood}/>
+      <MenuLayout name='PORK CHOP RECIPES' data={kid}/>
+      <MenuLayout name='GROUND BEEF RECIPES' data={traditional}/>
     </div>
   )
 }

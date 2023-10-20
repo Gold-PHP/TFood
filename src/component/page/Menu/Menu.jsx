@@ -17,7 +17,8 @@ function Menu() {
               isActive ? "text-red-700 font-bold" : "text-black"
             }
           >
-            Pizza
+            MEAT & SEAFOOD
+            
           </NavLink>
           <NavLink
             to="sides"
@@ -25,7 +26,7 @@ function Menu() {
               isActive ? "text-red-700 font-bold" : "text-black"
             }
           >
-            Side dish
+            RECIPES
           </NavLink>
           <NavLink
             to="dessert"
@@ -33,16 +34,16 @@ function Menu() {
               isActive ? "text-red-700 font-bold" : "text-black"
             }
           >
-            Dessert
+          HEALTHY & DIET
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="drinks"
             className={({ isActive }) =>
               isActive ? "text-red-700 font-bold" : "text-black"
             }
           >
-            Drinks
-          </NavLink>
+            Ground Beef
+          </NavLink> */}
         </nav>
       <Outlet />
     </Pagelayout>

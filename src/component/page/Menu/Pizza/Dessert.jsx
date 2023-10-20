@@ -15,7 +15,7 @@ function Dessert() {
 
   return (
     <div>
-      <MenuLayout name="DESSERT" data={dessert} />
+      <MenuLayout name="Healthy Recipes" data={dessert} />
     </div>
   );
 }

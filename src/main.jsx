@@ -10,7 +10,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 
 
 
-const clientGoogleId = "43127046985-2etlihf83g7v2fm4u6pastj46231m6bq.apps.googleusercontent.com";
+const clientGoogleId = "915416831530-37eup0v11jjbdmi9s4835collmmc7k85.apps.googleusercontent.com";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 

@@ -66,7 +66,7 @@ function Service() {
 
                                     </div>
                                     <h4 className="font-semibold text-xl text-dark mb-3">
-                                        Hotel Booking
+                                        Food Booking
                                     </h4>
                                     <p className="text-body-color">
                                         You can easily book your according to your
@@ -83,7 +83,7 @@ function Service() {
 
                                     </div>
                                     <h4 className="font-semibold text-xl text-dark mb-3">
-                                        Tour Plan
+                                        Plan
                                     </h4>
                                     <p className="text-body-color">
                                         We provide you the best plan within a short
@@ -156,7 +156,7 @@ function Service() {
                                     </h4>
                                     <p className="text-body-color">
                                         Happy
-                                        Travellers
+                                        Users
                                     </p>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@ function Service() {
                                         2k+
                                     </h4>
                                     <p className="text-body-color">
-                                        Travel History
+                                        History
                                     </p>
                                 </div>
                             </div>

@@ -15,11 +15,11 @@ function SideDish() {
 
   return (
     <div>
-      <MenuLayout name="CHICKEN" data={chicken} />
-      <MenuLayout name="PASTA" data={pasta} />
-      <MenuLayout name="SAUSAGE" data={sausage} />
-      <MenuLayout name="BREAD" data={bread} />
-      <MenuLayout name="POTATO" data={potato} />
+      <MenuLayout name="Breakfast & Brunch Recipes" data={chicken} />
+      <MenuLayout name="Lunch Recipes" data={pasta} />
+      <MenuLayout name="Appetizers & Snack Recipes" data={sausage} />
+      <MenuLayout name="Dinner Recipes" data={bread} />
+      <MenuLayout name="Dessert Recipes" data={potato} />
     </div>
   );
 }

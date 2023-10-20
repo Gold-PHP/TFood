@@ -19,19 +19,19 @@ function Register() {
 
     const validationSchema = yup.object({
         // firstname: yup.string().required("Chưa nhập first name"),
-        fullname: yup.string().required("Chưa nhập full name"),
+        fullname: yup.string().required("Enter Your Full Name"),
         email: yup
             .string()
-            .required("Chưa nhập email")
-            .email("Chưa nhập đúng định dạng email"),
+            .required("Enter Your Full Name")
+            .email("Email Error"),
         password: yup
             .string()
-            .required("Chưa nhập password")
-            .min(6, "Mật khẩu tối thiểu 6 ký tự"),
+            .required("Enter Your Password")
+            .min(6, "Password Error"),
         cpassword: yup
             .string()
-            .required("Chưa nhập confirm password")
-            .oneOf([yup.ref("password")], "Mật khẩu không trùng khớp"),
+            .required("Enter Your Confirm Password")
+            .oneOf([yup.ref("password")], "Password Error"),
     });
 
     const randomId = () => {
@@ -76,7 +76,7 @@ function Register() {
         <div>
             {/* component */}
             {/* Create by joker banny */}
-            <div className="h-screen bg-indigo-100 flex justify-center items-center  bg-cover bg-no-repeat" style={{ backgroundImage: 'url("https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?w=996&t=st=1697449043~exp=1697449643~hmac=8347226077f76677b4258e0f8af70a226e21f14ee3d792a68b0d4d09e0807c4a")' }}>
+            <div className="h-screen bg-indigo-100 flex justify-center items-center  bg-cover bg-no-repeat" style={{ backgroundImage: 'url("https://img.freepik.com/free-vector/cartoon-indian-restaurant-background_52683-69329.jpg?w=1380&t=st=1697776424~exp=1697777024~hmac=2694ddb383e13519f78b9dcf755b1c1ebc2c0f90de60ded322ee5e4f5709d02f")' }}>
                 <div className="lg:w-2/5 md:w-1/2 w-2/3">
                     <form onSubmit={formik.handleSubmit} className="bg-white p-10 rounded-lg shadow-lg min-w-full bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md">
                         <h1 className="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Register</h1>
@@ -144,8 +144,8 @@ function Register() {
                             />
                             {/* <input className="w-full text-black px-4 py-2 rounded-lg focus:outline-none bg-input" type="password" name="confirm" id="confirm" placeholder="confirm password" /> */}
                         </div>
-                        <button type="submit" className="w-full mt-6  bg-indigo-600 hover:bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans">Register</button>
-                        <button  className="w-full mt-6 mb-3 bg-indigo-600 hover:bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans">Login</button>
+                        <button type="submit" className="w-full mt-6  bg-input hover:bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans">Register</button>
+                        {/* <button  className="w-full mt-6 mb-3 bg-indigo-600 hover:bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans">Login</button> */}
                     </form>
                 </div>
             </div>

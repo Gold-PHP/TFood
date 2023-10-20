@@ -7,7 +7,8 @@ function Contact() {
           {/* <p className='text-center text-4xl font-bold mb-[4%]'>Contact</p> */}
           <section className="text-gray-600 body-font relative">
               <div className="absolute inset-0 bg-gray-300">
-                  <iframe width="100%" height="100%" frameBorder={0} marginHeight={0} marginWidth={0} title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style={{}} />
+                  <iframe width="100%" height="100%" frameBorder={0} marginHeight={0} marginWidth={0} title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251289.9826291269!2d103.79260962544593!3d10.22880397391525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a78c62b49eda17%3A0x8aa79fbbdd72cdb!2zUGjDuiBRdeG7kWM!5e0!3m2!1svi!2s!4v1697775783145!5m2!1svi!2s" style={{}} />
+                  {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251289.9826291269!2d103.79260962544593!3d10.22880397391525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a78c62b49eda17%3A0x8aa79fbbdd72cdb!2zUGjDuiBRdeG7kWM!5e0!3m2!1svi!2s!4v1697775783145!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe> */}
               </div>
               <div className="container px-5 py-24 mx-auto flex">
                   <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
