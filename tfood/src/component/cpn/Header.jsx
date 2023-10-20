@@ -46,7 +46,7 @@ function Header() {
                 <div className="flex items-center gap-5">
                   <Avatar alt="avatar default" src={userInfor.avatar} />
                   <p className="text-base font-semibold">
-                    Hi {userInfor.firstname + " " + userInfor.lastName}
+                    Hi {userInfor.fullname}
                   </p>
                   <Link to="/cart" className="cursor-pointer relative">
                     <ShoppingCartIcon />
