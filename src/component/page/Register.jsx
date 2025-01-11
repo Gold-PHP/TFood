@@ -39,7 +39,6 @@ function Register() {
     }
     const formik = useFormik({
         initialValues: {
-            // firstname: "",
             fullname: "",
             email: "",
             password: "",
@@ -49,13 +48,11 @@ function Register() {
         onSubmit: (values) => {
             const newData = {
                 id: randomId(),
-                // firstname: values.firstname,
                 fullname: values.fullname,
                 email: values.email,
                 password: values.password,
                 isAdmin: false,
                 avatar: "https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg"
-           
             }
             let checkExistEmail = userData.find(x => x.email == values.email)
             if (checkExistEmail) {
