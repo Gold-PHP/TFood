@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../Cart/CartItem";
-import Pagelayout from"../../cpn/Pagelayout"
+import Pagelayout from "../../cpn/Pagelayout"
 import { decrease, increase, removeCart } from "../../rtk/slices/cartSlice";
 import { useNavigate } from "react-router";
 import TextFields from "../../TextField/TextField";
@@ -11,20 +11,24 @@ import {
   apiGetPublicProvinces,
   apiGetPublicWards,
 } from "../../services/apiLocation";
+
 import * as yup from "yup";
 import { useFormik } from "formik";
 import moment from "moment";
 import { notification } from "../../utils/helper";
 
 function Checkout() {
+
   const [provinces, setProvinces] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [wards, setWards] = useState([]);
-  const [formState ,setFormState] = useState({
-    province : 0,
-    district : 0,
-    ward : 0
+
+  const [formState, setFormState] = useState({
+    province: 0,
+    district: 0,
+    ward: 0
   });
+
   const { cartList } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -56,60 +60,56 @@ function Checkout() {
     const fetchPublicProvince = async () => {
       const response = await apiGetPublicProvinces();
       if (response.status === 200) {
-        setProvinces(response?.data.results);
+        setProvinces(response.data); // Dữ liệu là mảng trực tiếp
       }
     };
     fetchPublicProvince();
   }, []);
 
-  useEffect(()=> {
+  useEffect(() => {
     const fetchPublicDistrict = async () => {
       const response = await apiGetPublicDistricts(formState.province);
       if (response.status === 200) {
-        setDistricts(response?.data.results);
+        setDistricts(response.data.districts || []); // Lấy districts từ response
       }
     };
     formState.province !== 0 && fetchPublicDistrict();
-  },[formState.province])
+  }, [formState.province]);
 
-  useEffect(()=> {
+  useEffect(() => {
     const fetchPublicWard = async () => {
       const response = await apiGetPublicWards(formState.district);
       if (response.status === 200) {
-        setWards(response?.data.results);
+        setWards(response.data.wards || []); // Lấy wards từ response
       }
     };
     formState.district && fetchPublicWard();
-  },[formState.district])
+  }, [formState.district]);
 
   const convertDataProvince = (array) => {
-    const ProvinceList = array.map((item) => ({
-      value: item.province_id,
-      label: item.province_name,
+    return array.map((item) => ({
+      value: item.code, // Thay province_id bằng code
+      label: item.name, // Thay province_name bằng name
     }));
-    return ProvinceList;
   };
 
   const convertDataDistrict = (array) => {
-    const DistrictList = array.map((item) => ({
-      value: item.district_id,
-      label: item.district_name,
+    return array.map((item) => ({
+      value: item.code,
+      label: item.name,
     }));
-    return DistrictList;
   };
 
   const convertDataWard = (array) => {
-    const WardList = array.map((item) => ({
-      value: item.ward_id,
-      label: item.ward_name,
+    return array.map((item) => ({
+      value: item.code,
+      label: item.name,
     }));
-    return WardList;
   };
 
   const randomId = () => {
-    return Math.floor(Math.random()*99999)
+    return Math.floor(Math.random() * 99999)
   }
-
 
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -132,21 +132,21 @@ function Checkout() {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       const newData = {
-        id : randomId(),
-        email : values.email,
-        firstname : values.firstname,
-        lastname : values.lastname,
-        province : provinces.filter(x => x.province_id == formState.province)[0].province_name,
-        district : districts.filter(x => x.district_id == formState.district)[0].district_name,
-        ward : wards.filter(x => x.ward_id == formState.ward)[0].ward_name,
-        address : values.address,
+        id: randomId(),
+        email: values.email,
+        firstname: values.firstname,
+        lastname: values.lastname,
+        province: provinces.find((x) => x.code === formState.province)?.name || "",
+        district: districts.find((x) => x.code === formState.district)?.name || "",
+        ward: wards.find((x) => x.code === formState.ward)?.name || "",
+        address: values.address,
         phone: values.phone,
-        cart : [...cartList],
-        totalPrice : totalPrice,
-        dateplaced : moment()
-      }
+        cart: [...cartList],
+        totalPrice: totalPrice,
+        dateplaced: moment(),
+      };
       notification("Order Success");
-      localStorage.setItem("history",JSON.stringify([...history,newData]));
+      localStorage.setItem("history", JSON.stringify([...history, newData]));
       localStorage.removeItem("cart");
       navigate("/");
       window.location.reload();
@@ -212,7 +212,7 @@ function Checkout() {
               options={convertDataProvince(provinces)}
               required={true}
               value={formState.province}
-              onChange={(e) => setFormState({...formState,province : e.target.value})}
+              onChange={(e) => setFormState({ ...formState, province: e.target.value })}
             />
             <SingleSelect
               name="District"
@@ -220,7 +220,7 @@ function Checkout() {
               options={convertDataDistrict(districts)}
               required={true}
               value={formState.district}
-              onChange={(e) => setFormState({...formState,district : e.target.value})}
+              onChange={(e) => setFormState({ ...formState, district: e.target.value })}
             />
           </div>
           <div className="flex gap-5">
@@ -230,7 +230,7 @@ function Checkout() {
               options={convertDataWard(wards)}
               required={true}
               value={formState.ward}
-              onChange={(e) => setFormState({...formState,ward : e.target.value})}
+              onChange={(e) => setFormState({ ...formState, ward: e.target.value })}
             />
             <TextFields
               name="Address"
