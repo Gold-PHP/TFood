@@ -18,7 +18,6 @@
       "isAdmin": true,
       "avatar": "https://static.vecteezy.com/system/resources/previews/023/413/966/original/cute-kawaii-pizza-chibi-mascot-cartoon-style-vector.jpg"
     },
-    
     {
       "id": 3,
       "fullname": "Admin",
@@ -67,13 +66,21 @@
       "password": "123456",
       "isAdmin": false,
       "avatar": "https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg"
+    },
+    {
+      "id": 3321,
+      "fullname": "gold050120",
+      "email": "gold050120@gmail.com",
+      "password": "11111111",
+      "isAdmin": false,
+      "avatar": "https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg"
     }
   ],
   "products": [
     {
       "id": 1,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/75/75/8/NxhOU2TMa2ZhvnHCoobQ_0S9A8180.jpg",
-      "name": "QUICK AND EASY CHICKEN ENCHILADAS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/10/Combo-slim-2.jpg",
+      "name": "Combo 2 – Drinkizz Mocktail Slim Magic Breadstick",
       "price": 8.02,
       "size": "Medium",
       "category": "favor",
@@ -81,8 +88,8 @@
     },
     {
       "id": 2,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/11/12/57/JYpNCleQTSwjLUjUstwg_DSC_0136.JPG",
-      "name": "30 MINUTE CHICKEN AND DUMPLINGS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/11/9a138239fab22cec75a3-300x300.jpg",
+      "name": "ORGANIC NATURAL ENERGY DRINK",
       "price": 8.02,
       "size": "Medium",
       "category": "favor",
@@ -90,8 +97,8 @@
     },
     {
       "id": 3,
-      "img": "https://img.sndimg.com/food/image/upload/fl_progressive,c_fill,q_80,h_420,w_631/v1/img/upload/editorial/2016-07-23+-+bb03+-+how+to+pan+sear+salmon/2+Salmon+Flesh+Side.jpg",
-      "name": "PICK YOUR SALMON",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2022/12/FINISHED-PRODUCT-TEA-5-_-CUP-220114-300x300.jpg",
+      "name": "Relax Tea (Hot)",
       "price": 8.02,
       "size": "Medium",
       "category": "seafood",
@@ -99,8 +106,8 @@
     },
     {
       "id": 4,
-      "img": "https://img.sndimg.com/food/image/upload/fl_progressive,c_fill,q_80,h_420,w_631/v1/img/upload/editorial/2016-07-23+-+bb03+-+how+to+pan+sear+salmon/4+Dry+and+Season.jpg",
-      "name": "DRY AND SEASON",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/12/ECOMMERCE-VISUAL-ONE-STAITON-2-600x600.jpg",
+      "name": "Sáng da",
       "price": 8.02,
       "size": "Medium",
       "category": "seafood",
@@ -108,8 +115,8 @@
     },
     {
       "id": 5,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/14/25/42/0rz9bK7tTz6iMmwWXaL8_0S9A3113.jpg",
-      "name": "SIMPLY OVEN BAKED PORK CHOPS AND RICE",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2022/01/Thiet-ke-khong-ten-2-600x600.png",
+      "name": "Thanh lọc",
       "price": 8.02,
       "size": "Medium",
       "category": "kid",
@@ -117,8 +124,8 @@
     },
     {
       "id": 6,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/49/19/98/fiugDJyTR1KhiK0m45NN_0S9A1766.jpg",
-      "name": "THE NEELEY'S SMOTHERED PORK CHOPS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/12/2-1-600x600.png",
+      "name": "Thức uống Số 11 Green Muscle",
       "price": 8.02,
       "size": "Medium",
       "category": "kid",
@@ -126,8 +133,8 @@
     },
     {
       "id": 7,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/32/52/2/kTsWTDzwTOyMctbywBtv_0S9A8648.jpg",
-      "name": "GRANDMAS SLOPPY JOES",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2022/04/GREEN-MUSCLE-600x600.png",
+      "name": "Thức uống Số 11 Green Muscle – Khuyến mãi 10%",
       "price": 8.02,
       "size": "Medium",
       "category": "traditional",
@@ -135,8 +142,8 @@
     },
     {
       "id": 8,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/48/76/0/5hkdEzvxTPq1mbdqRf6i_0S9A6427.jpg",
-      "name": "SZECHUAN NOODLES WITH SPICY BEEF SAUCE",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/12/Thiet-ke-khong-ten-4-600x600.png",
+      "name": "Thức uống Số 4 Digest Energy",
       "price": 8.02,
       "size": "Medium",
       "category": "traditional",
@@ -144,8 +151,8 @@
     },
     {
       "id": 9,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/18/73/62/InucCQAmQ9iM0JikkFn9_pumpkinpancakes-1982.jpg",
-      "name": "LIGHT AND FLUFFY PUMPKIN PANCAKES",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2022/03/2-600x600.png",
+      "name": "Thức uống Số 7 Green Detox",
       "price": 8.02,
       "size": "Medium",
       "category": "chicken",
@@ -153,8 +160,8 @@
     },
     {
       "id": 10,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/28/50/1/zZAaHjlSTRiZbSC80nav_0S9A5119.jpg",
-      "name": "BELGIAN WAFFLES",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2022/03/1-600x600.png",
+      "name": "Thức uống Số 8 Sai Gon Refresh",
       "price": 8.02,
       "size": "Medium",
       "category": "chicken",
@@ -162,8 +169,8 @@
     },
     {
       "id": 11,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/45/31/7/I1fZ8mB8QE2gAyGGg4uJ_0S9A5320.jpg",
-      "name": "EASY PIZZA MUFFINS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/12/Thiet-ke-khong-ten-3-600x600.png",
+      "name": "Thức uống Số 9 Trà sữa dừa",
       "price": 8.02,
       "size": "Medium",
       "category": "pasta",
@@ -171,8 +178,8 @@
     },
     {
       "id": 12,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/90/25/7/36pILnF7RdSfI8CRhII1_0S9A0272.jpg",
-      "name": "PEANUT BUTTER AND JELLY PANINI",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/11/Thiet-ke-khong-ten-600x600.png",
+      "name": "Tỉnh táo",
       "price": 8.02,
       "size": "Medium",
       "category": "pasta",
@@ -180,8 +187,8 @@
     },
     {
       "id": 13,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/30/97/7/7GmgWw4TTUCCw7xGKQAP_0S9A6434.jpg",
-      "name": "MOZZARELLA STICKS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/11/Thiet-ke-khong-ten-11-600x600.png",
+      "name": "Trà Thảo Mộc Năng Lượng Số 3 Slim Body",
       "price": 8.02,
       "size": "Medium",
       "category": "sausage",
@@ -198,7 +205,7 @@
     },
     {
       "id": 15,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/30/08/1/uaSpHBwtSIuQpcHZKQeu_0S9A0050.jpg",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/12/Thiet-ke-khong-ten-6-600x600.png",
       "name": "GROUND BEEF GYROS",
       "price": 8.02,
       "size": "Medium",
@@ -208,7 +215,7 @@
     {
       "id": 16,
       "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/28/76/8/SyAcnUdwTHGQfekagLBj_ABEL%25203%2520-%2520final_1.png",
-      "name": "ABSOLUTE BEST EVER LASAGNA",
+      "name": "Trà Thảo Mộc Năng Lượng Số 6 Calm Throat",
       "price": 8.02,
       "size": "Medium",
       "category": "bread",
@@ -216,8 +223,8 @@
     },
     {
       "id": 17,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/26/37/0/bzwUWgTTGZ83fb1AbjMQ_CC%25208%2520-%2520final_6.jpg",
-      "name": "CHOCOLATE CAKE",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/10/Banh-Mi-Drinkizz-ONE-Cup-550_550.jpg",
+      "name": "Wake Up Tea (hot)",
       "price": 8.02,
       "size": "Medium",
       "category": "potato",
@@ -225,8 +232,8 @@
     },
     {
       "id": 18,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/23/29/07/JfMRguwVQ7ZRfxKZPwUb_0S9A5080.jpg",
-      "name": "BRENNAN'S BANANAS FOSTER",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2024/04/DSC00234-scaled-e1718174753691-600x600.jpg",
+      "name": "Fresh Gut",
       "price": 8.02,
       "size": "Medium",
       "category": "potato",
@@ -234,8 +241,8 @@
     },
     {
       "id": 19,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/53/37/81/Oj8Vhm2wT361z6MENukJ_0S9A2524.jpg",
-      "name": "CHICKEN PARMESAN",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2022/01/Thiet-ke-khong-ten-600x600.png",
+      "name": "Ly Kiss Your Energy",
       "price": 8.02,
       "size": "Medium",
       "category": "dessert",
@@ -243,8 +250,8 @@
     },
     {
       "id": 20,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/23/29/07/JfMRguwVQ7ZRfxKZPwUb_0S9A5080.jpg",
-      "name": "BRENNAN'S BANANAS FOSTER",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/10/combo-Wakeup-2.jpg",
+      "name": "Combo 3 – Drinkizz Mocktail Wake Up Breadstick",
       "price": 8.02,
       "size": "Medium",
       "category": "dessert",

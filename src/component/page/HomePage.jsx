@@ -9,8 +9,8 @@ function HomePage() {
   const foodList = [
     {
       "id": 1,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/75/75/8/NxhOU2TMa2ZhvnHCoobQ_0S9A8180.jpg",
-      "name": "QUICK AND EASY CHICKEN ENCHILADAS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/10/Banh-Mi-Drinkizz-ONE-Cup-550_550.jpg",
+      "name": "Drinkizz Mocktail Slim Magic Breadstick",
       "price": 8,
       "size": "chicken breasts",
       "category": "ChickenRecipes",
@@ -18,8 +18,8 @@ function HomePage() {
     },
     {
       "id": 2,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/11/12/57/JYpNCleQTSwjLUjUstwg_DSC_0136.JPG",
-      "name": "30 MINUTE CHICKEN AND DUMPLINGS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/10/combo-Wakeup-2.jpg",
+      "name": "Drinkizz O.N.E Breadstick",
       "price": 8,
       "size": "medium",
       "category": "ChickenRecipes",
@@ -27,8 +27,8 @@ function HomePage() {
     },
     {
       "id": 3,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/49/52/71/yqZVTfDRQ8KiFgrvSJRe_0S9A9577.jpg",
-      "name": "SPINACH AND CHEESE STUFFED CHICKEN BREAST",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2023/10/tra-sua-2-300x300.jpg",
+      "name": "Drinkizz Mocktail Speed Up Breadstick",
       "price": 9,
       "size": "medium",
       "category": "ChickenRecipes",
@@ -36,8 +36,8 @@ function HomePage() {
     },
     {
       "id": 4,
-      "img": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/39/78/Ve6XwMvToypkQvkIyESC_0S9A1605.jpg",
-      "name": "CHICKEN QUESADILLAS",
+      "img": "https://shop.drinkizz.com/wp-content/uploads/2021/12/1-1-600x600.png",
+      "name": "Eo thon",
       "price": 12,
       "size": "medium",
       "category": "ChickenRecipes",
